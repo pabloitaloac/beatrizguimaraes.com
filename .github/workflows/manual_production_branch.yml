@@ -5,7 +5,7 @@ on:
   
 jobs:
   build:
-    runs-on: [self-hosted, production]
+    runs-on: [self-hosted]
 
     steps:
       - name: grant permissions to runners
