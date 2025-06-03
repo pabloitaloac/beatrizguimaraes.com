@@ -19,11 +19,27 @@ export const metadata: Metadata = {
   authors: [{ name: "Beatriz Guimarães" }],
   creator: "Beatriz Guimarães",
   publisher: "Beatriz Guimarães",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/images/beatriz-logo.svg', type: 'image/svg+xml', sizes: '120x120' }
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/images/beatriz-logo.svg',
+  },
   openGraph: {
     title: "Beatriz Guimarães - UI/UX Designer Portfolio",
     description: "UI/UX Designer passionate about creating digital experiences that matter.",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: '/images/beatriz-logo-full.svg',
+        width: 320,
+        height: 120,
+        alt: 'Beatriz Guimarães Logo',
+      }
+    ],
   },
   robots: {
     index: true,
@@ -38,6 +54,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/images/beatriz-logo.svg" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

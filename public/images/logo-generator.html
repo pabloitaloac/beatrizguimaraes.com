@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatriz Guimarães - Logo Variations</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo-section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .logo-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #FB7185 0%, #A855F7 50%, #F472B6 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 16px;
+        }
+        
+        .logo-icon span {
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo-full {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        .logo-full .logo-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 12px;
+        }
+        
+        .logo-full .logo-icon span {
+            font-size: 32px;
+        }
+        
+        .logo-text h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #E11D48 0%, #9333EA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-text p {
+            margin: 4px 0 0 0;
+            font-size: 14px;
+            color: #6B7280;
+            font-weight: 400;
+        }
+        
+        .label {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background: #E11D48;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #1f2937;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .size-variations {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .size-32 .logo-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+        }
+        
+        .size-32 .logo-icon span {
+            font-size: 16px;
+        }
+        
+        .size-48 .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+        }
+        
+        .size-48 .logo-icon span {
+            font-size: 24px;
+        }
+        
+        .size-64 .logo-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 10px;
+        }
+        
+        .size-64 .logo-icon span {
+            font-size: 28px;
+        }
+        
+        .size-info {
+            color: #6B7280;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Beatriz Guimarães - Logo Variations</h2>
+        
+        <!-- Icon Only - Large -->
+        <div class="logo-section">
+            <div class="label">Icon Only - 120px</div>
+            <div class="logo-icon">
+                <span>B</span>
+            </div>
+        </div>
+        
+        <!-- Full Logo -->
+        <div class="logo-section">
+            <div class="label">Full Logo</div>
+            <div class="logo-full">
+                <div class="logo-icon">
+                    <span>B</span>
+                </div>
+                <div class="logo-text">
+                    <h1>Beatriz Guimarães</h1>
+                    <p>UI/UX Designer</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Size Variations -->
+        <div class="grid">
+            <div class="logo-section">
+                <div class="label">Small Sizes</div>
+                <div class="size-variations">
+                    <div class="size-32">
+                        <div class="logo-icon">
+                            <span>B</span>
+                        </div>
+                        <div class="size-info">32×32px - Favicon</div>
+                    </div>
+                    <div class="size-48">
+                        <div class="logo-icon">
+                            <span>B</span>
+                        </div>
+                        <div class="size-info">48×48px - App Icon</div>
+                    </div>
+                    <div class="size-64">
+                        <div class="logo-icon">
+                            <span>B</span>
+                        </div>
+                        <div class="size-info">64×64px - Profile</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dark Background Version -->
+            <div class="logo-section" style="background: #1f2937;">
+                <div class="label">Dark Background</div>
+                <div class="logo-full">
+                    <div class="logo-icon">
+                        <span>B</span>
+                    </div>
+                    <div class="logo-text">
+                        <h1 style="background: linear-gradient(90deg, #FB7185 0%, #A855F7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Beatriz Guimarães</h1>
+                        <p style="color: #D1D5DB;">UI/UX Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Usage Instructions -->
+        <div class="logo-section" style="text-align: center; background: #f8fafc; border: 2px dashed #E11D48;">
+            <h3 style="color: #E11D48; margin-top: 0;">How to use these logos</h3>
+            <p style="color: #6B7280; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                These logos are designed to match the current header design. Use the SVG files for web and scalable applications. 
+                For PNG versions, take screenshots of this page or convert the SVG files. The icon works great for favicons, 
+                app icons, and social media profiles, while the full logo is perfect for headers, business cards, and signatures.
+            </p>
+        </div>
+    </div>
+</body>
+</html> 

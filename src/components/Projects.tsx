@@ -6,74 +6,27 @@ import Link from 'next/link';
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   
-  const categories = ['All', 'Mobile App', 'Web Design', 'Dashboard', 'E-commerce'];
+  const categories = [
+    'All',
+    // 'Mobile App',
+    'Web Design',
+    // 'Dashboard',
+    // 'E-commerce',
+    // 'Landing Page',
+    // 'UI/UX Design'
+  ];
   
   const projects = [
     {
       id: 1,
-      title: "EazyClock Mobile App",
-      category: "Mobile App",
-      description: "Mobile-first time tracking app with one-tap functionality and smart project detection for enhanced productivity.",
+      title: "EazyClock.com",
+      category: "Web Design",
+      description: "A time tracking app with one-tap functionality and smart project detection for enhanced productivity.",
       image: "⏰",
-      tags: ["React Native", "UX Research", "Prototyping"],
+      tags: ["Web Design", "UX Research", "Prototyping"],
       results: ["150% increase in user adoption", "80% faster task completion"],
       color: "from-rose-400 to-pink-500",
       hasCase: true
-    },
-    {
-      id: 2,
-      title: "FinTech Dashboard",
-      category: "Dashboard",
-      description: "Comprehensive financial dashboard for investment tracking and portfolio management.",
-      image: "📊",
-      tags: ["Web App", "Data Visualization", "User Testing"],
-      results: ["60% reduction in task completion time", "95% user satisfaction"],
-      color: "from-blue-400 to-cyan-500",
-      hasCase: false
-    },
-    {
-      id: 3,
-      title: "Creative Agency Website",
-      category: "Web Design",
-      description: "Modern, animated website showcasing creative services with stunning visual storytelling.",
-      image: "🎨",
-      tags: ["Web Design", "Animation", "Brand Identity"],
-      results: ["200% increase in client inquiries", "Award-winning design"],
-      color: "from-purple-400 to-pink-500",
-      hasCase: false
-    },
-    {
-      id: 4,
-      title: "FoodDelivery Platform",
-      category: "Mobile App",
-      description: "Food ordering app with seamless checkout flow and real-time order tracking.",
-      image: "🍕",
-      tags: ["Mobile Design", "User Journey", "A/B Testing"],
-      results: ["35% faster checkout process", "50% increase in repeat orders"],
-      color: "from-orange-400 to-red-500",
-      hasCase: false
-    },
-    {
-      id: 5,
-      title: "Fashion E-commerce",
-      category: "E-commerce",
-      description: "Luxury fashion e-commerce platform with AR try-on and personalized recommendations.",
-      image: "👗",
-      tags: ["E-commerce", "AR Integration", "Personalization"],
-      results: ["45% increase in sales", "30% reduction in returns"],
-      color: "from-rose-400 to-pink-500",
-      hasCase: false
-    },
-    {
-      id: 6,
-      title: "Healthcare Portal",
-      category: "Web Design",
-      description: "Patient portal for telemedicine with appointment booking and health record management.",
-      image: "🏥",
-      tags: ["Healthcare", "Accessibility", "Security"],
-      results: ["80% user adoption rate", "Improved patient satisfaction"],
-      color: "from-teal-400 to-cyan-500",
-      hasCase: false
     }
   ];
 

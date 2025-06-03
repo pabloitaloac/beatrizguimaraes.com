@@ -11,21 +11,9 @@ const About = () => {
   const experience = [
     {
       year: "2023-Present",
-      role: "Senior UI/UX Designer",
-      company: "TechCorp Inc.",
-      description: "Leading design for enterprise products, managing design systems, and mentoring junior designers."
-    },
-    {
-      year: "2021-2023",
       role: "UI/UX Designer",
-      company: "StartupLab",
-      description: "Designed mobile apps and web platforms for fintech and e-commerce clients."
-    },
-    {
-      year: "2019-2021",
-      role: "Junior Designer",
-      company: "Creative Agency",
-      description: "Created user interfaces for various web applications and conducted user research."
+      company: "Freelance",
+      description: "Providing UI/UX design services for web and mobile applications, focusing on user-centered design and business growth."
     }
   ];
 
@@ -60,14 +48,25 @@ const About = () => {
             <div className="mt-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">My Journey</h3>
               <p className="text-gray-600 mb-4">
-                Started as a graphic designer with a passion for understanding user behavior. 
-                Over 5+ years, I've evolved into a comprehensive UX professional who bridges 
-                the gap between beautiful design and functional user experiences.
+                Currently pursuing Software Engineering (2021-2026) while specializing in UI/UX design. 
+                Over 1+ year, I&apos;ve been developing my expertise through comprehensive education and 
+                hands-on project experience.
               </p>
               <p className="text-gray-600">
                 I believe great design is invisible – it just works. My approach combines 
                 data-driven insights with creative intuition to create products that users love.
               </p>
+              
+              {/* Education */}
+              <div className="mt-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Education</h4>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Software Engineering (2021-2026) - Currently studying</li>
+                  <li>• Advanced Graphic Design at Alura (2024)</li>
+                  <li>• UI/UX Advanced at Alura (2023-2024)</li>
+                  <li>• Curso Superior de Tecnologia UX Designer at Coursera (2024-2025)</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -126,19 +125,19 @@ const About = () => {
           <div className="bg-gradient-to-r from-rose-50 to-purple-50 rounded-2xl p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-rose-600 mb-2">50+</div>
-                <div className="text-gray-600">Projects Completed</div>
+                <div className="text-3xl font-bold text-rose-600 mb-2">1</div>
+                <div className="text-gray-600">Project Completed</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">20+</div>
-                <div className="text-gray-600">Happy Clients</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">1</div>
+                <div className="text-gray-600">Happy Client</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-rose-600 mb-2">5+</div>
+                <div className="text-3xl font-bold text-rose-600 mb-2">1+</div>
                 <div className="text-gray-600">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
                 <div className="text-gray-600">Success Rate</div>
               </div>
             </div>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="120" viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square with gradient -->
+  <defs>
+    <!-- Main gradient (rose-400 via purple-500 to pink-400) -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FB7185;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F472B6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- White overlay gradient -->
+    <linearGradient id="whiteOverlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </linearGradient>
+    
+    <!-- Text gradient (rose-600 to purple-600) -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E11D48;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Main rounded square background -->
+  <rect x="10" y="22.5" width="75" height="75" rx="12" ry="12" fill="url(#mainGradient)" filter="url(#shadow)"/>
+  
+  <!-- White overlay for depth effect -->
+  <rect x="10" y="22.5" width="75" height="75" rx="12" ry="12" fill="url(#whiteOverlay)"/>
+  
+  <!-- Letter "B" -->
+  <text x="47.5" y="71" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" text-anchor="middle" fill="#FFFFFF">B</text>
+  
+  <!-- Name text -->
+  <text x="105" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="url(#textGradient)">Beatriz Guimarães</text>
+  
+  <!-- Subtitle text -->
+  <text x="105" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="400" fill="#6B7280">UI/UX Designer</text>
+</svg> 

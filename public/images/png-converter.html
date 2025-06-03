@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo PNG Converter</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 40px;
+            background: #f8fafc;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .logo-item {
+            text-align: center;
+            padding: 20px;
+            border: 2px dashed #E11D48;
+            border-radius: 15px;
+            background: #fafafa;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        button {
+            background: linear-gradient(135deg, #FB7185 0%, #A855F7 50%, #F472B6 100%);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 5px;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .instructions {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #E11D48;">Logo PNG Converter</h1>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Click "Generate" for each size to create the PNG version</li>
+                <li>Right-click on each canvas and "Save image as..."</li>
+                <li>Use these filenames:
+                    <ul>
+                        <li>32×32 → favicon-32x32.png</li>
+                        <li>180×180 → apple-touch-icon.png</li>
+                        <li>192×192 → android-chrome-192x192.png</li>
+                        <li>512×512 → android-chrome-512x512.png</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="size-grid">
+            <div class="logo-item">
+                <h4>32×32 (Favicon)</h4>
+                <canvas id="canvas32" width="32" height="32"></canvas><br>
+                <button onclick="generateLogo(32, 'canvas32')">Generate</button>
+            </div>
+            
+            <div class="logo-item">
+                <h4>180×180 (Apple Touch)</h4>
+                <canvas id="canvas180" width="180" height="180"></canvas><br>
+                <button onclick="generateLogo(180, 'canvas180')">Generate</button>
+            </div>
+            
+            <div class="logo-item">
+                <h4>192×192 (Android)</h4>
+                <canvas id="canvas192" width="192" height="192"></canvas><br>
+                <button onclick="generateLogo(192, 'canvas192')">Generate</button>
+            </div>
+            
+            <div class="logo-item">
+                <h4>512×512 (Android Large)</h4>
+                <canvas id="canvas512" width="512" height="512"></canvas><br>
+                <button onclick="generateLogo(512, 'canvas512')">Generate</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateLogo(size, canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Calculate dimensions
+            const padding = Math.max(2, size * 0.06);
+            const logoSize = size - (padding * 2);
+            const borderRadius = Math.max(4, size * 0.12);
+            
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, logoSize, logoSize);
+            gradient.addColorStop(0, '#FB7185');
+            gradient.addColorStop(0.5, '#A855F7');
+            gradient.addColorStop(1, '#F472B6');
+            
+            // Draw rounded rectangle background
+            ctx.fillStyle = gradient;
+            roundRect(ctx, padding, padding, logoSize, logoSize, borderRadius);
+            ctx.fill();
+            
+            // Add white overlay
+            const whiteGradient = ctx.createLinearGradient(padding, padding, padding + logoSize, padding + logoSize);
+            whiteGradient.addColorStop(0, 'rgba(255, 255, 255, 0.2)');
+            whiteGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = whiteGradient;
+            roundRect(ctx, padding, padding, logoSize, logoSize, borderRadius);
+            ctx.fill();
+            
+            // Draw letter "B"
+            ctx.fillStyle = '#FFFFFF';
+            ctx.font = `bold ${Math.floor(size * 0.5)}px system-ui, -apple-system, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('B', size / 2, size / 2 + Math.floor(size * 0.03));
+        }
+        
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+        
+        // Auto-generate all sizes on page load
+        window.onload = function() {
+            generateLogo(32, 'canvas32');
+            generateLogo(180, 'canvas180');
+            generateLogo(192, 'canvas192');
+            generateLogo(512, 'canvas512');
+        }
+    </script>
+</body>
+</html> 

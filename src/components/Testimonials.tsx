@@ -8,53 +8,13 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "Product Manager",
-      company: "TechStartup Inc.",
-      image: "👩‍💼",
+      name: "EazyClock Team",
+      role: "Client",
+      company: "EazyClock.com",
+      image: "⏰",
       rating: 5,
-      text: "Beatriz transformed our user experience completely. Her attention to detail and user-centered approach resulted in a 40% increase in user engagement. Absolutely phenomenal work!",
-      project: "Mobile App Redesign"
-    },
-    {
-      id: 2,
-      name: "Marcus Chen",
-      role: "CEO",
-      company: "FinanceFlow",
-      image: "👨‍💻",
-      rating: 5,
-      text: "Working with Beatriz was a game-changer for our platform. She understood our complex requirements and delivered a dashboard that our users actually love using.",
-      project: "Dashboard Design"
-    },
-    {
-      id: 3,
-      name: "Elena Rodriguez",
-      role: "Marketing Director",
-      company: "Creative Agency",
-      image: "👩‍🎨",
-      rating: 5,
-      text: "Beatriz didn't just design our website, she elevated our entire brand presence. The design is not only beautiful but incredibly functional. Our conversion rates doubled!",
-      project: "Website Redesign"
-    },
-    {
-      id: 4,
-      name: "David Thompson",
-      role: "Founder",
-      company: "EcoCommerce",
-      image: "👨‍💼",
-      rating: 5,
-      text: "The e-commerce platform Beatriz designed for us is intuitive and elegant. She took the time to understand our customers and created an experience that drives sales.",
-      project: "E-commerce Platform"
-    },
-    {
-      id: 5,
-      name: "Anna Kowalski",
-      role: "Head of Design",
-      company: "Digital Solutions",
-      image: "👩‍🔬",
-      rating: 5,
-      text: "Beatriz's design system work was exceptional. She created components that are not only beautiful but also scalable. Our development team loves working with her designs.",
-      project: "Design System"
+      text: "Beatriz delivered exceptional UI/UX design for our time tracking platform. Her attention to detail and user-centered approach resulted in a clean, intuitive interface that our users love. Professional, reliable, and highly recommended!",
+      project: "Web Platform Design"
     }
   ];
 
@@ -66,14 +26,14 @@ const Testimonials = () => {
   }, [testimonials.length]);
 
   const stats = [
-    { number: "20+", label: "Happy Clients", icon: "😊" },
-    { number: "4.9", label: "Average Rating", icon: "⭐" },
-    { number: "95%", label: "Success Rate", icon: "🎯" },
+    { number: "1", label: "Happy Client", icon: "😊" },
+    { number: "5.0", label: "Average Rating", icon: "⭐" },
+    { number: "100%", label: "Success Rate", icon: "🎯" },
     { number: "100%", label: "On-Time Delivery", icon: "⏰" }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fadeInUp">
@@ -81,7 +41,7 @@ const Testimonials = () => {
             Client <span className="bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent">Testimonials</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Here's what my clients say about working together and the results we've achieved.
+            Here&apos;s what my clients say about working together and the results we&apos;ve achieved.
           </p>
         </div>
 
@@ -135,7 +95,7 @@ const Testimonials = () => {
               </div>
               
               <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
-                "{testimonials[currentTestimonial].text}"
+                &ldquo;{testimonials[currentTestimonial].text}&rdquo;
               </blockquote>
               
               {/* Navigation dots */}
@@ -182,7 +142,7 @@ const Testimonials = () => {
               
               {/* Testimonial text */}
               <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
               
               {/* Project badge */}
@@ -200,7 +160,7 @@ const Testimonials = () => {
               Ready to Join These Success Stories?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let's work together to create exceptional user experiences that drive real business results.
+              Let&apos;s work together to create exceptional user experiences that drive real business results.
             </p>
             <a
               href="#contact"

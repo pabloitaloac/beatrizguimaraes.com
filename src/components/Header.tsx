@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,13 +76,20 @@ const Header = () => {
               className="group flex items-center space-x-3 animate-fadeInLeft"
             >
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 via-purple-500 to-pink-400 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
-                  <span className="text-white text-xl font-bold relative z-10">B</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-rose-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 relative overflow-hidden">
+                  <Image
+                    src="/images/beatriz-logo.svg"
+                    alt="Beatriz Guimarães Logo"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-rose-400 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
                 </div>
-                {/* Floating ring animation */}
-                <div className="absolute inset-0 border-2 border-rose-400/30 rounded-2xl group-hover:scale-125 group-hover:opacity-0 transition-all duration-500"></div>
+                {/* Modern glow effect instead of rings */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-rose-400/20 via-purple-500/20 to-pink-400/20 opacity-0 group-hover:opacity-100 blur-lg transition-all duration-500 -z-10"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-rose-300/10 via-purple-400/10 to-pink-300/10 opacity-0 group-hover:opacity-100 blur-xl scale-110 transition-all duration-700 -z-10"></div>
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold bg-gradient-to-r from-rose-600 to-purple-600 bg-clip-text text-transparent group-hover:from-rose-500 group-hover:to-purple-500 transition-all duration-300">
@@ -132,7 +140,7 @@ const Header = () => {
                 onClick={() => handleNavClick('#contact')}
                 className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-rose-500 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-rose-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-fadeInRight group"
               >
-                <span>Let's Talk</span>
+                <span>Let&apos;s Talk</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -222,7 +230,7 @@ const Header = () => {
                 onClick={() => handleNavClick('#contact')}
                 className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-rose-500 to-purple-600 text-white p-4 rounded-2xl hover:from-rose-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg animate-fadeInRight delay-700 group"
               >
-                <span className="text-lg font-medium">Let's Work Together</span>
+                <span className="text-lg font-medium">Let&apos;s Work Together</span>
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -232,9 +240,7 @@ const Header = () => {
             {/* Social Links */}
             <div className="mt-6 flex justify-center space-x-4">
               {[
-                { icon: '💼', href: '#', label: 'LinkedIn' },
-                { icon: '🎨', href: '#', label: 'Behance' },
-                { icon: '🏀', href: '#', label: 'Dribbble' }
+                { icon: '💼', href: 'https://www.linkedin.com/in/beatriz-guimaraes-cabral/', label: 'LinkedIn' }
               ].map((social, index) => (
                 <a
                   key={social.label}
