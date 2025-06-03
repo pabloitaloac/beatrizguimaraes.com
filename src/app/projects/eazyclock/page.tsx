@@ -493,7 +493,7 @@ const EazyClockCaseStudy = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { name: "01 Home Page (Client User).png", title: "Client Home Page" },
-              { name: "02 Booking Page –  (Client User).png", title: "Booking Page" },
+              { name: "02 Booking Page Client User.png", title: "Booking Page" },
               { name: "03 My Bookings (Client User Dashboard).png", title: "Client Dashboard" },
               { name: "04 Service Provider - Daily Agenda (Dashboard).png", title: "Provider Dashboard" },
               { name: "05 Service Provider - Appointment Details.png", title: "Appointment Details" },
