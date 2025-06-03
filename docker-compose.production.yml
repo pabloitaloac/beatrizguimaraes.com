@@ -1,5 +1,5 @@
 services:
-  beatrizguimaraes_frontend_prod:
+  beatrizguimaraes_frontend_production:
     environment:
       - AUTH_URL_INTERNAL=${AUTH_URL_INTERNAL}
       - AUTH_SECRET=${AUTH_SECRET}
@@ -8,7 +8,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    container_name: beatrizguimaraes_frontend_prod
+    container_name: beatrizguimaraes_frontend_production
     ports:
       - "6200:6200"
     restart: always
