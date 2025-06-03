@@ -1,3 +1,4 @@
+import Image from "next/image";
 const About = () => {
   const skills = [
     { name: "User Research", level: 95, icon: "🔍" },
@@ -36,7 +37,13 @@ const About = () => {
             <div className="relative">
               {/* Profile Image Placeholder */}
               <div className="w-80 h-80 mx-auto lg:mx-0 bg-gradient-to-br from-rose-200 to-purple-200 rounded-2xl flex items-center justify-center shadow-2xl">
-                <div className="text-8xl">👩‍💻</div>
+                <Image
+                  src="/images/profile.jpeg"
+                  alt="Profile" 
+                  width={320}
+                  height={320} 
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
               
               {/* Floating Elements */}
@@ -60,12 +67,39 @@ const About = () => {
               {/* Education */}
               <div className="mt-6">
                 <h4 className="text-lg font-semibold text-gray-900 mb-3">Education</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Software Engineering (2021-2026) - Currently studying</li>
-                  <li>• Advanced Graphic Design at Alura (2024)</li>
-                  <li>• UI/UX Advanced at Alura (2023-2024)</li>
-                  <li>• Curso Superior de Tecnologia UX Designer at Coursera (2024-2025)</li>
-                </ul>
+                <div className="bg-gradient-to-r from-rose-50 to-purple-50 rounded-lg p-4 border-l-4 border-rose-400">
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="bg-gradient-to-r from-blue-50 via-red-50 to-yellow-50 p-4 rounded-lg border-2 border-blue-200 shadow-md transform hover:scale-105 transition-all duration-300">
+                      <div className="flex items-center">
+                        <div className="flex items-center mr-3">
+                          <Image 
+                            src="/images/google.png" 
+                            alt="Google Logo" 
+                            width={96}
+                            height={32}
+                            className="w-24 h-8 mr-2"
+                          />
+                        </div>
+                        <div>
+                          <span className="font-bold text-gray-800 text-lg">UI/UX Design Professional Certificate</span>
+                          <div className="text-blue-600 font-semibold text-sm">Coursera (2024-2025)</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">🎨</span>
+                      <span className="font-medium">Advanced Graphic Design at Alura (2024)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-rose-500 mr-2">💡</span>
+                      <span className="font-medium">UI/UX Advanced at Alura (2023-2024)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">💻</span>
+                      <span className="font-medium">Software Engineering (2021-2026) - Currently studying</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
